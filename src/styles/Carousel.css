@@ -1,0 +1,28 @@
+/* Update your Carousel.css file with these styles */
+.sliderr {
+  position: relative;
+  color: white;
+  transition: ease 0.3s;
+  padding: 5px;
+}
+
+.sliderr:hover {
+    transform: scale(1.05); /* Enlarge the slide on hover for a subtle interactive effect */
+}
+
+.sliderr img {
+  width: 20vw;
+  height: auto; /* Allow the height to adjust based on the image aspect ratio */
+  object-fit: cover;
+  border-radius: 15px; /* Add border-radius for rounded corners */
+  margin-top: 20px;
+}
+
+.sliderr .title {
+  width: 70%; /* Adjust the width to your liking */
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 8px; /* Adjust the space between the poster and the title */
+  color: white;
+}

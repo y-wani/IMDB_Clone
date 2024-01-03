@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  overflow-y: hidden;
+  margin-right: -20px;
 }
 
 .slide {
@@ -16,19 +16,21 @@ body {
 
 .content {
   position: absolute;
-  bottom: 25%;
-  left: 10%;
+  bottom: 10%;
+  left: 7%;
   right: 10%;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
   padding: 20px; /* Add padding for better readability */
+  height: 35vh;
+  width: 70%;
 }
 
 .MovieName {
   font-size: 32px;
   font-weight: bold;
   font-family: "Poppins", sans-serif;
-  color: #fff;
+  color: gold;
 }
 
 .Genres {
@@ -38,16 +40,20 @@ body {
 
 .GenreBox {
   margin-right: 10px;
-  padding: 8px 12px;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  font-size: 16px;
+  padding: 10px 15px; /* Adjusted padding */
+  border: 1px solid #4d4d4d; /* Slightly darker border color */
+  border-radius: 8px; /* Increased border radius for a softer look */
+  font-size: 14px; /* Slightly smaller font size */
   font-weight: bold;
   color: #fff;
-  background-color: black;
+  background: linear-gradient(to bottom, #333333, #0e0e0e); /* Gradient background */
   font-family: "Poppins", sans-serif;
+  transition: background 0.3s; /* Smooth transition on hover */
 }
 
+.GenreBox:hover {
+  background: linear-gradient(to bottom, #0e0e0e, #333333); /* Inverted gradient on hover */
+}
 .details {
   display: flex;
   flex-direction: row;
@@ -81,5 +87,14 @@ body {
   left: 10px;
   transform: rotate(180deg);
 }
-
+.overview {
+  position: absolute;
+  top: 60%;
+  font-size: 18px;
+  color: #fff;
+  line-height: 2;
+  font-family: "Poppins", sans-serif;
+  font-weight: medium;
+  font-size: 16px;
+}
 

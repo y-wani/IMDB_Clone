@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import img from "../images/background12.png";
 import axios from "axios";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 const Landing = () => {
   const baseURL =
@@ -16,6 +17,7 @@ const Landing = () => {
     "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlNThmNTMxODUwZGM2ZmQ5NTFiMjE2NWI5YThiMjdjOSIsInN1YiI6IjY1OTI2OGRkZTY0MGQ2N2VlMGQ2MmQ5MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GRch24-UOH4D-mx8hiIw9AN5p2oMDpJx8D3MP8jouYw";
 
   const [movies, setMovies] = useState([]);
+
   useEffect(() => {
     const options = {
       method: "GET",
@@ -35,15 +37,7 @@ const Landing = () => {
   const NextArrow = ({ onClick }) => {
     return (
       <div className="next-slick-arrow" onClick={onClick}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          stroke="black"
-          height="24"
-          viewBox="0 -960 960 960"
-          width="24"
-        >
-          <path d="m242-200 200-280-200-280h98l200 280-200 280h-98Zm238 0 200-280-200-280h98l200 280-200 280h-98Z" />
-        </svg>
+        <AiOutlineArrowRight size={30} />
       </div>
     );
   };
@@ -64,13 +58,89 @@ const Landing = () => {
     );
   };
 
-  const genres = ["Action", "Adventure", "Sci-fi"]; // Separate genres into individual strings
+  const genres = [
+    {
+      id: 28,
+      name: "Action",
+    },
+    {
+      id: 12,
+      name: "Abenteuer",
+    },
+    {
+      id: 16,
+      name: "Animation",
+    },
+    {
+      id: 35,
+      name: "Komödie",
+    },
+    {
+      id: 80,
+      name: "Krimi",
+    },
+    {
+      id: 99,
+      name: "Dokumentarfilm",
+    },
+    {
+      id: 18,
+      name: "Drama",
+    },
+    {
+      id: 10751,
+      name: "Familie",
+    },
+    {
+      id: 14,
+      name: "Fantasy",
+    },
+    {
+      id: 36,
+      name: "Historie",
+    },
+    {
+      id: 27,
+      name: "Horror",
+    },
+    {
+      id: 10402,
+      name: "Musik",
+    },
+    {
+      id: 9648,
+      name: "Mystery",
+    },
+    {
+      id: 10749,
+      name: "Liebesfilm",
+    },
+    {
+      id: 878,
+      name: "Science Fiction",
+    },
+    {
+      id: 10770,
+      name: "TV-Film",
+    },
+    {
+      id: 53,
+      name: "Thriller",
+    },
+    {
+      id: 10752,
+      name: "Kriegsfilm",
+    },
+    {
+      id: 37,
+      name: "Western",
+    },
+  ];
 
   const settings = {
-    dots: true,
     infinite: true,
-    speed: 5000,
-    autoplay: false,
+    speed: 500,
+    autoplay: true,
     autoplaySpeed: 5000,
     slidesToScroll: 1,
     slidesToShow: 1,
@@ -93,32 +163,22 @@ const Landing = () => {
               objectPosition: "50% 50%",
             }}
           />
-          {console.log(movie.poster_path)}
           <div className="content">
             <div className="MovieName">{movie.original_title}</div>
             <div className="Genres">
-              {genres.map((genre, index) => (
+              {movie.genre_ids.map((genreId, index) => (
                 <div key={index} className="GenreBox">
-                  {genre}
+                  {genres.find((genre) => genreId === genre.id)?.name}
                 </div>
               ))}
             </div>
             <div className="details">
               <FaCalendarAlt color="white" />
               <div className="text">{movie.release_date}</div>
-              <BsStopwatchFill
-                color="white"
-                style={{ marginLeft: 20, marginTop: 1 }}
-              />
-              s<div className="text">3:12:00</div>
+
               <FaStar color="yellow" style={{ marginLeft: 20, marginTop: 1 }} />
               <div className="text">{movie.vote_average}</div>
-              {/*<p className="overview">
-                Two sisters find an ancient vinyl that gives birth to
-                bloodthirsty demons that run amok in a Los Angeles apartment
-                building and thrusts them into a primal battle for survival as
-                they face the most nightmarish version of family imaginable.
-              </p>*/}
+              <p className="overview">{movie.overview}</p>
             </div>
           </div>
         </div>
