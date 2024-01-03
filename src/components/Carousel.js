@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import { FaStar } from "react-icons/fa6";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/Carousel.css";
@@ -52,6 +53,10 @@ const Carousel = ({ movies }) => {
               src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
               alt={movie.original_title}
             />
+            <div className="star">  
+            <FaStar  color="gold"/>
+            <span className="rating"> {movie.vote_average} </span>
+            </div>
             <div className="title">{movie.original_title}</div>
           </div>
         ))}
