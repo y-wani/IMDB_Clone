@@ -65,7 +65,7 @@ const Landing = () => {
     },
     {
       id: 12,
-      name: "Abenteuer",
+      name: "Adventure",
     },
     {
       id: 16,
@@ -73,15 +73,15 @@ const Landing = () => {
     },
     {
       id: 35,
-      name: "Komödie",
+      name: "Comedy",
     },
     {
       id: 80,
-      name: "Krimi",
+      name: "Crime",
     },
     {
       id: 99,
-      name: "Dokumentarfilm",
+      name: "Documentary",
     },
     {
       id: 18,
@@ -89,7 +89,7 @@ const Landing = () => {
     },
     {
       id: 10751,
-      name: "Familie",
+      name: "Family",
     },
     {
       id: 14,
@@ -97,7 +97,7 @@ const Landing = () => {
     },
     {
       id: 36,
-      name: "Historie",
+      name: "History",
     },
     {
       id: 27,
@@ -105,7 +105,7 @@ const Landing = () => {
     },
     {
       id: 10402,
-      name: "Musik",
+      name: "Music",
     },
     {
       id: 9648,
@@ -113,7 +113,7 @@ const Landing = () => {
     },
     {
       id: 10749,
-      name: "Liebesfilm",
+      name: "Love",
     },
     {
       id: 878,
@@ -129,7 +129,71 @@ const Landing = () => {
     },
     {
       id: 10752,
-      name: "Kriegsfilm",
+      name: "War",
+    },
+    {
+      id: 37,
+      name: "Western",
+    },
+    {
+      id: 10759,
+      name: "Action",
+    },
+    {
+      id: 16,
+      name: "Animation",
+    },
+    {
+      id: 35,
+      name: "Comedy",
+    },
+    {
+      id: 80,
+      name: "Crime",
+    },
+    {
+      id: 99,
+      name: "Documentary",
+    },
+    {
+      id: 18,
+      name: "Drama",
+    },
+    {
+      id: 10751,
+      name: "Family",
+    },
+    {
+      id: 10762,
+      name: "Kids",
+    },
+    {
+      id: 9648,
+      name: "Mystery",
+    },
+    {
+      id: 10763,
+      name: "News",
+    },
+    {
+      id: 10764,
+      name: "Reality",
+    },
+    {
+      id: 10765,
+      name: "Sci-Fi",
+    },
+    {
+      id: 10766,
+      name: "Soap",
+    },
+    {
+      id: 10767,
+      name: "Talk",
+    },
+    {
+      id: 10768,
+      name: "Politics",
     },
     {
       id: 37,

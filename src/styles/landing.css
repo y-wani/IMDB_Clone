@@ -46,7 +46,7 @@ body {
   font-size: 14px; /* Slightly smaller font size */
   font-weight: bold;
   color: #fff;
-  background: linear-gradient(to bottom, #333333, #0e0e0e); /* Gradient background */
+  background: linear-gradient(to bottom, transparent, #0e0e0e); /* Gradient background */
   font-family: "Poppins", sans-serif;
   transition: background 0.3s; /* Smooth transition on hover */
 }

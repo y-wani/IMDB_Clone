@@ -5,7 +5,7 @@ import Carousel from './Carousel';
 
 const Recommend = () => {
     const [trending, setTrending] = useState([]);
-    const baseURL = "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1"
+    const baseURL = "https://api.themoviedb.org/3/trending/all/day?language=en-US"
 
     useEffect(() => {
         const options = {

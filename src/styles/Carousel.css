@@ -7,11 +7,11 @@
 }
 
 .sliderr:hover {
-    transform: scale(1.05); /* Enlarge the slide on hover for a subtle interactive effect */
+    transform: scale(1.02); /* Enlarge the slide on hover for a subtle interactive effect */
 }
 
 .sliderr img {
-  width: 20vw;
+  width: 22vw;
   height: auto; /* Allow the height to adjust based on the image aspect ratio */
   object-fit: cover;
   border-radius: 15px; /* Add border-radius for rounded corners */
@@ -32,7 +32,7 @@
     margin-top: 10px;
 }
 
-.GenreBox {
+.GenresBox {
     margin-right: 10px;
     padding: 10px 15px; /* Adjusted padding */
     border: 1px solid #4d4d4d; /* Slightly darker border color */
@@ -40,23 +40,27 @@
     font-size: 14px; /* Slightly smaller font size */
     font-weight: bold;
     color: #fff;
-    background: linear-gradient(to bottom, #333333, #0e0e0e); /* Gradient background */
+    background: linear-gradient(to bottom, transparent, #0e0e0e); /* Gradient background */
     font-family: "Poppins", sans-serif;
     transition: background 0.3s; /* Smooth transition on hover */
+    position: absolute;
+    top: 6%;
+    left: 3%;
 }
 
-.GenreBox:hover {
+.GenresBox:hover {
     background: linear-gradient(to bottom, #0e0e0e, #333333); /* Inverted gradient on hover */
 }
 
 .star {
     position: absolute;
-    top: 6%;
-    left:53%;
+    top: 7.5%;
+    left:60%;
 }
 
 .rating {
     position: absolute;
     top: 0%;
     left:105%;
+    font-weight: bold;
 }
