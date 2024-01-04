@@ -33,6 +33,7 @@ const Navigation = () => {
           </select>
         </div>
         <span className="nav-link">Trending</span>
+        <span className="nav-link">Discover</span>
       </span>
       <div className="search-container">
         <input

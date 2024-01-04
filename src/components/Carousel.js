@@ -176,7 +176,7 @@ const Carousel = ({ movies }) => {
   const settings = {
     infinite: true,
     speed: 500,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 5000,
     slidesToScroll: 1,
     slidesToShow: 3,
