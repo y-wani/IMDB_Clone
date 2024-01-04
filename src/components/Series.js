@@ -3,11 +3,11 @@ import "../styles/Recomm.css";
 import axios from "axios";
 import Carousel from "./Carousel";
 
-const Recommend = () => {
+const Series = (movies) => {
   const [trending, setTrending] = useState([]);
-  const baseURL =
-    "https://api.themoviedb.org/3/trending/all/day?language=en-US";
 
+  const baseURL =
+    "https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1";
   useEffect(() => {
     const options = {
       method: "GET",
@@ -25,14 +25,13 @@ const Recommend = () => {
   }, []);
 
   return (
-    <div className="container">
-      <div className="Headers">Trending</div>
+    <div className="container2">
+      <div className="Headers">Series</div>
       <div className="carousel">
         <Carousel movies={trending} />
       </div>
-      
     </div>
   );
 };
 
-export default Recommend;
+export default Series;

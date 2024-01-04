@@ -37,7 +37,7 @@ const Landing = () => {
   const NextArrow = ({ onClick }) => {
     return (
       <div className="next-slick-arrow" onClick={onClick}>
-        <AiOutlineArrowRight size={30} />
+        <AiOutlineArrowRight size={30} style={{marginRight: "30px"}}/>
       </div>
     );
   };
@@ -241,7 +241,7 @@ const Landing = () => {
               <div className="text">{movie.release_date}</div>
 
               <FaStar color="yellow" style={{ marginLeft: 20, marginTop: 1 }} />
-              <div className="text">{movie.vote_average}</div>
+              <div className="text">{Math.round(movie.vote_average * 10) / 10}</div>
               <p className="overview">{movie.overview}</p>
             </div>
           </div>

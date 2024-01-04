@@ -19,19 +19,19 @@ body {
   left: 7%;
   right: 10%;
   z-index: 1;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(29, 29, 29, 0.6)); /* Slightly darker semi-transparent background */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(29, 29, 29, 0.6));
   padding: 20px;
-  border-radius: 10px; /* Increased border radius for a softer look */
+  border-radius: 10px;
   height: 35vh;
   width: 70%;
-  color: #fff; /* Text color */
+  color: #fff;
 }
 
 .MovieName {
-  font-size: 32px;
+  font-size: 36px; /* Slightly increased font size */
   font-weight: bold;
-  font-family: "Poppins", sans-serif;
-  color: gold;
+  font-family: "Montserrat", sans-serif; /* Experimenting with a different font family */
+  color: #f9c930; /* Bright yellow color for the movie name */
 }
 
 .Genres {
@@ -48,7 +48,7 @@ body {
   font-weight: bold;
   color: #fff;
   background: linear-gradient(to bottom, transparent, #0e0e0e);
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif; /* Another font family */
   transition: background 0.3s;
 }
 
@@ -67,7 +67,8 @@ body {
   margin-left: 0.3%;
   font-weight: 500;
   align-self: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: wheat; /* Light gray color for the details text */
 }
 
 .next-slick-arrow,
@@ -76,7 +77,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #fff;
+  color: #f9c930; /* Bright yellow color for the arrows */
   font-size: 24px;
 }
 
@@ -92,8 +93,9 @@ body {
 .overview {
   position: absolute;
   top: 60%;
-  font-size: 16px; /* Adjusted font size */
-  line-height: 1.5; /* Adjusted line height */
-  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif; /* Another font family */
   font-weight: medium;
+  color: wheat; /* Light gray color for the overview text */
 }

@@ -18,7 +18,7 @@ const Navigation = () => {
       <span className="nav-links">
         <span className="nav-link">Movies</span>
         <span className="nav-link">Series</span>
-        <span className="nav-link">Animation</span>
+
         <div className="dropdown-container">
           <select
             value={selectedGenre}
@@ -32,6 +32,7 @@ const Navigation = () => {
             ))}
           </select>
         </div>
+        <span className="nav-link">Trending</span>
       </span>
       <div className="search-container">
         <input

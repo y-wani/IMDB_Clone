@@ -9,7 +9,7 @@ const Carousel = ({ movies }) => {
   const NextArrow = ({ onClick }) => {
     return (
       <div className="next-slick-arrow" onClick={onClick}>
-        <AiOutlineArrowRight size={30} />
+        <AiOutlineArrowRight size={30} style={{marginRight: "30px"}}/>
       </div>
     );
   };
@@ -195,7 +195,7 @@ const Carousel = ({ movies }) => {
             />
             <div className="star">
               <FaStar color="gold" />
-              <span className="rating"> {movie.vote_average} </span>
+              <span className="rating"> {Math.round(movie.vote_average * 10) / 10} </span>
             </div>
             <div className="Genres">
               {movie.genre_ids.slice(0, 1).map((genreId, index) => (
@@ -205,9 +205,9 @@ const Carousel = ({ movies }) => {
               ))}
             </div>
             <div className="title">
-              {movie.media_type === "tv"
-                ? movie.original_name
-                : movie.original_title}
+              {movie.media_type === "movie"
+                ? movie.original_title 
+                : movie.name}
             </div>
           </div>
         ))}
