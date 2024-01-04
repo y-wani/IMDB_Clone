@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../styles/Recomm.css";
 import axios from "axios";
 import Carousel from "./Carousel";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 const Recommend = () => {
   const [trending, setTrending] = useState([]);
@@ -26,11 +27,15 @@ const Recommend = () => {
 
   return (
     <div className="container">
-      <div className="Headers">Trending</div>
+      <div className="viewall">
+        <div className="Headers">Trending</div>
+        <div className="viewalltext"> View all</div>
+        <AiOutlineArrowRight color="#7f7f7f" className="arrow"/>
+      </div>
+      
       <div className="carousel">
         <Carousel movies={trending} />
       </div>
-      
     </div>
   );
 };

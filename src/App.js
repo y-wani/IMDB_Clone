@@ -5,6 +5,7 @@ import axios from 'axios';
 import Recommend from './components/Recommend';
 import Series from './components/Series';
 import SectionSeparator from './components/SectionSeparator ';
+import Discover from './components/Discover';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Landing />
       <Recommend />
       <Series />
+      <Discover />
     </div>
   );
 }

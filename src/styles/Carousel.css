@@ -52,6 +52,7 @@
     background: linear-gradient(to bottom, #0e0e0e, #333333); /* Inverted gradient on hover */
 }
 
+
 .star {
     position: absolute;
     top: 7.5%;
@@ -64,3 +65,4 @@
     left:105%;
     font-weight: bold;
 }
+
