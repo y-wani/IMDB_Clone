@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/Carousel.css";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { Link } from "react-router-dom"; // import Link
+
 const Carousel = ({ movies }) => {
   const NextArrow = ({ onClick }) => {
     return (
@@ -189,10 +191,12 @@ const Carousel = ({ movies }) => {
       <Slider {...settings}>
         {movies.map((movie) => (
           <div key={movie.id} className="sliderr">
-            <img
-              src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-              alt={movie.original_title}
-            />
+            <Link to={`/description/${movie.id}`}>
+              <img
+                src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+                alt={movie.original_title}
+              />
+            </Link>
             <div className="star">
               <FaStar color="gold" />
               <span className="rating">

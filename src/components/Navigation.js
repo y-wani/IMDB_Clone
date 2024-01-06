@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
+// Navigation.js
+
+import React, { useState } from "react";
 import "../styles/nav.css";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { TiVideoOutline } from "react-icons/ti";
+import { Link } from "react-router-dom";
 
-const Navigation = () => {
-  const [selectedGenre, setSelectedGenre] = useState("Genre"); // Default selected genre
-  const genres = ["All", "Action", "Comedy", "Drama", "Sci-Fi"]; // Example genres
+const Navigation = ({ scrollToSection }) => {
+  const [selectedGenre, setSelectedGenre] = useState("Genre");
+  const genres = ["All", "Action", "Comedy", "Drama", "Sci-Fi"];
 
   const onSubmit = () => {
     console.log("button clicked with genre:", selectedGenre);
@@ -14,10 +17,20 @@ const Navigation = () => {
 
   return (
     <nav className="nav-bar">
-      <TiVideoOutline color="yellow" size={50} className="logo" />
+      <Link to="/">
+        <TiVideoOutline color="yellow" size={50} className="logo" />
+      </Link>
       <span className="nav-links">
-        <span className="nav-link">Movies</span>
-        <span className="nav-link">Series</span>
+        <span
+          className="nav-link"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          Now playing
+        </span>
+
+        <span className="nav-link" onClick={() => scrollToSection("series")}>
+          Series
+        </span>
 
         <div className="dropdown-container">
           <select
@@ -32,8 +45,12 @@ const Navigation = () => {
             ))}
           </select>
         </div>
-        <span className="nav-link">Trending</span>
-        <span className="nav-link">Discover</span>
+        <span className="nav-link" onClick={() => scrollToSection("trend")}>
+          Trending
+        </span>
+        <span className="nav-link" onClick={() => scrollToSection("discover")}>
+          Discover
+        </span>
       </span>
       <div className="search-container">
         <input

@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import img from "../images/background12.png";
 import axios from "axios";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { Link } from "react-router-dom"; // import Link
 
 const Landing = () => {
   const baseURL =
@@ -37,7 +38,7 @@ const Landing = () => {
   const NextArrow = ({ onClick }) => {
     return (
       <div className="next-slick-arrow" onClick={onClick}>
-        <AiOutlineArrowRight size={30} style={{marginRight: "30px"}}/>
+        <AiOutlineArrowRight size={30} style={{ marginRight: "30px" }} />
       </div>
     );
   };
@@ -216,17 +217,20 @@ const Landing = () => {
     <Slider {...settings}>
       {movies.map((movie) => (
         <div key={movie.id} className="slide">
-          <img
-            src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
-            alt={movie.original_title}
-            style={{
-              marginTop: "5%",
-              height: "100vh",
-              width: "100vw", // This will maintain the aspect ratio
-              objectFit: "cover",
-              objectPosition: "50% 50%",
-            }}
-          />
+          <Link to={`/description/${movie.id}`}>
+            {console.log(movie.id)}
+            <img
+              src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+              alt={movie.original_title}
+              style={{
+                marginTop: "5%",
+                height: "100vh",
+                width: "100vw", // This will maintain the aspect ratio
+                objectFit: "cover",
+                objectPosition: "50% 50%",
+              }}
+            />
+          </Link>
           <div className="content">
             <div className="MovieName">{movie.original_title}</div>
             <div className="Genres">
@@ -235,13 +239,16 @@ const Landing = () => {
                   {genres.find((genre) => genreId === genre.id)?.name}
                 </div>
               ))}
+              
             </div>
             <div className="details">
               <FaCalendarAlt color="white" />
               <div className="text">{movie.release_date}</div>
 
               <FaStar color="yellow" style={{ marginLeft: 20, marginTop: 1 }} />
-              <div className="text">{Math.round(movie.vote_average * 10) / 10}</div>
+              <div className="text">
+                {Math.round(movie.vote_average * 10) / 10}
+              </div>
               <p className="overview">{movie.overview}</p>
             </div>
           </div>

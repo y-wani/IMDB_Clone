@@ -30,7 +30,10 @@ const Discover = () => {
     Promise.all([request1, request2])
       .then(([response1, response2]) => {
         // Combine the results from both responses
-        const combinedResults = [...response1.data.results, ...response2.data.results];
+        const combinedResults = [
+          ...response1.data.results,
+          ...response2.data.results,
+        ];
         setTrending(combinedResults);
       })
       .catch((err) => console.error(err));
@@ -38,13 +41,16 @@ const Discover = () => {
 
   return (
     <div className="container">
-
       <div className="viewall">
         <div className="Headers">Discover</div>
         <div className="viewalltext"> View all</div>
-        <AiOutlineArrowRight color="#7f7f7f" className="arrow" style={{marginLeft: "-5px"}}/>
+        <AiOutlineArrowRight
+          color="#7f7f7f"
+          className="arrow"
+          style={{ marginLeft: "-5px" }}
+        />
       </div>
-      
+
       <div className="carousel">
         <Carousel movies={trending} />
       </div>
