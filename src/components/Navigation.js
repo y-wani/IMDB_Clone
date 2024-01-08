@@ -5,14 +5,19 @@ import "../styles/nav.css";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { TiVideoOutline } from "react-icons/ti";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const Navigation = ({ scrollToSection }) => {
+const Navigation = ({ scrollToSection, onSearchSubmit }) => {
+
+  const navigate = useNavigate();
+
+  const [searchValue, setSearchValue] = useState("");
   const [selectedGenre, setSelectedGenre] = useState("Genre");
   const genres = ["All", "Action", "Comedy", "Drama", "Sci-Fi"];
 
-  const onSubmit = () => {
-    console.log("button clicked with genre:", selectedGenre);
-    // Add your logic to handle the search with the selected genre
+  const onSubmit = () => {  
+    onSearchSubmit(searchValue);
+    navigate("/searchResults")  
   };
 
   return (
@@ -53,10 +58,12 @@ const Navigation = ({ scrollToSection }) => {
         </span>
       </span>
       <div className="search-container">
-        <input
+      <input
           type="text"
           className="Search-bar"
           placeholder="Search movies..."
+          value={searchValue}
+          onChange={(e) => setSearchValue(e.target.value)}
         />
         <div onClick={onSubmit}>
           <HiMagnifyingGlass className="search-icon" size={25} color="white" />

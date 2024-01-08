@@ -21,6 +21,7 @@ body {
     background-color: #000000;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin-top: 3.8%;
+    height: 100vh;
 }
 
 .poster {
@@ -97,7 +98,6 @@ body {
 
 .vote-text {
     font-size: 25px;
-    
     position: relative;
     top: -5%;
 }

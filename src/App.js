@@ -1,6 +1,6 @@
 // App.js
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./App.css";
 import Navigation from "./components/Navigation";
 import Landing from "./components/Landing";
@@ -9,8 +9,15 @@ import Series from "./components/Series";
 import Discover from "./components/Discover";
 import Description from "./components/Description";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import SearchResults from "./components/SearchResults";
 
 function App() {
+  const [searchValue, setSearchValue] = useState("");
+
+  const handleSearchSubmit = (value) => {
+    setSearchValue(value);
+  };
+
   const landingRef = useRef(null);
   const trendRef = useRef(null);
   const seriesRef = useRef(null);
@@ -37,12 +44,19 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navigation scrollToSection={scrollToSection} />
+        <Navigation
+          scrollToSection={scrollToSection}
+          onSearchSubmit={handleSearchSubmit}
+        />
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/description/:id" element={<Description />} />
+          <Route
+            path="/searchResults"
+            element={<SearchResults searchValue={searchValue} />}
+          />
         </Routes>
-        
+
         <div ref={trendRef}>
           <Recommend />
         </div>
