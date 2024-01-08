@@ -1,3 +1,14 @@
+# IMDB Clone / Movie Search database
+This project is an IMDb clone built using React, allowing users to search for movies and receive recommendations. It provides a user-friendly interface to explore movie details, ratings, genres, and more.
+
+Screenshots:
+
+![Screenshot 2024-01-08 053633](https://github.com/y-wani/IMDB_Clone/assets/88449363/783445a6-9387-4b24-b512-9d5315c031e6)
+![Screenshot 2024-01-08 053730](https://github.com/y-wani/IMDB_Clone/assets/88449363/2a9cfd5e-7738-4069-8db8-6fd9bb86b05b)
+![Screenshot 2024-01-08 053804](https://github.com/y-wani/IMDB_Clone/assets/88449363/3a480145-0502-4ada-8bdc-eac8a04e515f)
+![Screenshot 2024-01-08 053914](https://github.com/y-wani/IMDB_Clone/assets/88449363/bed7dc50-0b5b-4173-a75f-5bce31f2b216)
+![Screenshot 2024-01-08 054023](https://github.com/y-wani/IMDB_Clone/assets/88449363/8f3151e0-f782-49f4-a82d-f11d2e95750b)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
